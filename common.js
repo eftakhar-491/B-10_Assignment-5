@@ -9,7 +9,7 @@ export const nav = function (data) {
               </button>
               <div class="flex flex-col lg:flex-row items-center md:gap-4">
                 <img class="w-8" src="./assets/logo.png" alt="logo" />
-                <h2 class="text-sm md:text-lg font-bold text-dark">
+                <h2 class="hidden md:block md:text-lg font-bold text-dark">
                   Donate Bangladesh
                 </h2>
               </div>
@@ -22,12 +22,12 @@ export const nav = function (data) {
             </nav>
             <section class="mt-5 flex justify-center gap-4 pb-4">
               <button
-                class="donate-page-btn w-24 h-11 rounded-lg bg-bgGreen font-bold text-dark"
+                class="active:scale-95 donate-page-btn w-24 h-11 rounded-lg bg-bgGreen font-bold text-dark"
               >
                 Donate
               </button>
               <button
-                class="history-page-btn w-24 h-11 rounded-lg text-lightDark border-2"
+                class="active:scale-95 history-page-btn w-24 h-11 rounded-lg text-lightDark border-2"
               >
                 History
               </button>
@@ -36,7 +36,7 @@ export const nav = function (data) {
   } else {
     return `
       <nav
-              class="sticky top-0 flex justify-between items-center bg-[#fff9ea72] h-20 lg:px-[10%] px-[2%] backdrop-blur-xl"
+              class=" flex justify-between items-center bg-[#fff9ea72] h-20 lg:px-[10%] px-[2%] backdrop-blur-xl"
             >
               <button class="menu w-24 h-11 bg-bgGreen rounded-lg font-bold text-dark">
                 Blog
@@ -59,7 +59,7 @@ export const nav = function (data) {
 };
 export const faqs = function (data) {
   return `
-       <div class="common-btn box border-2 p-4  mb-4 rounded-xl">
+       <div class=" common-btn box border-2 p-4  mb-4 rounded-xl">
           <div class="flex justify-between items-center mb-4">
             <h2 class="text-lg font-bold text-dark">
              ${data.title}

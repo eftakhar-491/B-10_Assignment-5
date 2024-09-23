@@ -71,19 +71,23 @@ modal.addEventListener("click", () => {
   modal.classList.toggle("flex");
 });
 donatePageBtn.addEventListener("click", () => {
-  historyPageBtn.classList.remove("bg-bgGreen", "font-bold", "text-dark");
-  historyPageBtn.classList.add("text-lightDark", "border-2");
-  donatePageBtn.classList.add("bg-bgGreen", "font-bold", "text-dark");
-  donatePageBtn.classList.remove("text-lightDark", "border-2");
-  historySection.classList.toggle("hidden");
-  donateSection.classList.toggle("hidden");
+  if (!donatePageBtn.classList.contains("bg-bgGreen")) {
+    historyPageBtn.classList.remove("bg-bgGreen", "font-bold", "text-dark");
+    historyPageBtn.classList.add("text-lightDark", "border-2");
+    donatePageBtn.classList.add("bg-bgGreen", "font-bold", "text-dark");
+    donatePageBtn.classList.remove("text-lightDark", "border-2");
+    historySection.classList.toggle("hidden");
+    donateSection.classList.toggle("hidden");
+  }
 });
 historyPageBtn.addEventListener("click", () => {
-  historyPageBtn.classList.add("bg-bgGreen", "font-bold", "text-dark");
-  historyPageBtn.classList.remove("text-lightDark", "border-2");
-  donatePageBtn.classList.remove("bg-bgGreen", "font-bold", "text-dark");
-  donatePageBtn.classList.add("text-lightDark", "border-2");
+  if (!historyPageBtn.classList.contains("bg-bgGreen")) {
+    historyPageBtn.classList.add("bg-bgGreen", "font-bold", "text-dark");
+    historyPageBtn.classList.remove("text-lightDark", "border-2");
+    donatePageBtn.classList.remove("bg-bgGreen", "font-bold", "text-dark");
+    donatePageBtn.classList.add("text-lightDark", "border-2");
 
-  historySection.classList.toggle("hidden");
-  donateSection.classList.toggle("hidden");
+    historySection.classList.toggle("hidden");
+    donateSection.classList.toggle("hidden");
+  }
 });
