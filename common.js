@@ -98,14 +98,12 @@ export const faqs = function (data) {
       `;
 };
 export const homeBlog = function (data) {
-  console.log(data);
-  if (
-    window.location.pathname === "/B-10_Assignment-5/index.html" ||
-    window.location.pathname === "/B-10_Assignment-5/"
-  ) {
-    window.location.href = "/B-10_Assignment-5/blog.html";
+  if (window.location.pathname === "/B-10_Assignment-5/") {
+    console.log(data);
+    window.location.href =
+      "https://eftakhar-491.github.io/B-10_Assignment-5/blog.html";
   } else if (window.location.pathname === "/B-10_Assignment-5/blog.html") {
-    window.location.href = "/B-10_Assignment-5/index.html";
+    window.location.href = "https://eftakhar-491.github.io/B-10_Assignment-5/";
   }
 };
 export const setMenuName = function (data) {
