@@ -43,7 +43,7 @@ export const nav = function (data) {
               </button>
               <div class="flex flex-col lg:flex-row items-center md:gap-4">
                 <img class="w-8" src="./assets/logo.png" alt="logo" />
-                <h2 class="text-sm md:text-lg font-bold text-dark">
+                <h2 class="hidden md:block md:text-lg font-bold text-dark">
                   Donate Bangladesh
                 </h2>
               </div>
