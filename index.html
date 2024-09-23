@@ -22,7 +22,6 @@
               dark: "#111111",
               lightDark: "#111111B3",
               bgGreen: "#B4F461",
-              bgNav: "#F9F7F3",
             },
             fontFamily: {
               lexend: "Lexend",
@@ -33,9 +32,9 @@
     </script>
   </head>
   <body class="max-w-[1440px] mx-auto font-lexend">
-    <header class="mx-auto">
-      <nav
-        class="flex justify-between items-center bg-bgNav h-20 lg:px-[10%] px-[2%]"
+    <header class="mx-auto sticky top-0 backdrop-blur-3xl">
+      <!-- <nav
+        class="sticky top-0 flex justify-between items-center bg-[#fff9ea72] h-20 lg:px-[10%] px-[2%] backdrop-blur-xl"
       >
         <button class="w-24 h-11 bg-bgGreen rounded-lg font-bold text-dark">
           Blog
@@ -48,20 +47,46 @@
         </div>
         <div class="flex items-center gap-2">
           <img src="./assets/coin.png" alt="coin-Img" />
-          <p class="text-lightDark"><span>5500</span>BDT</p>
+          <p class="text-lightDark">
+            <span id="account-balance">5500</span>BDT
+          </p>
         </div>
       </nav>
-      <section class="mt-5 flex justify-center gap-4">
-        <button class="w-24 h-11 bg-bgGreen rounded-lg font-bold text-dark">
+      <section class="mt-5 flex justify-center gap-4 pb-4">
+        <button
+          class="donate-page-btn w-24 h-11 rounded-lg bg-bgGreen font-bold text-dark"
+        >
           Donate
         </button>
-        <button class="w-24 h-11 rounded-lg text-lightDark border-2">
+        <button
+          class="history-page-btn w-24 h-11 rounded-lg text-lightDark border-2"
+        >
           History
         </button>
-      </section>
+      </section> -->
     </header>
     <main class="mt-12 p-3">
-      <section>
+      <!-- modal design -->
+
+      <section
+        class="modal hidden w-full h-screen fixed top-0 left-0 bg-[rgba(3,3,3,0.66)] items-center justify-center"
+      >
+        <div
+          class="lg:w-[500px] w-11/12 py-14 shadow-xl rounded-xl bg-white gap-4 flex flex-col justify-center items-center"
+        >
+          <h1 class="text-3xl font-bold text-dark">Congrates!</h1>
+          <img src="./assets/coin.png" alt="" srcset="" />
+          <p class="text-sm text-lightDark">You Have Donate for Humankind</p>
+          <h2 class="text-xl font-bold text-dark">Successfully</h2>
+          <div
+            class="active:scale-95 cursor-pointer px-6 py-3 rounded-lg bg-[rgb(234,234,234)] font-semibold text-sm"
+          >
+            close confirmation
+          </div>
+        </div>
+      </section>
+      <!-- donate page design -->
+      <section class="donate-section">
         <div
           class="flex items-center flex-col lg:flex-row lg:w-4/5 mb-5 mx-auto gap-4 lg:gap-0 p-5 border-2 rounded-xl border-[#1111111A]"
         >
@@ -93,7 +118,7 @@
                 placeholder="Write Donation Amount"
               />
               <button
-                class="w-full h-11 bg-bgGreen rounded-lg font-bold text-dark"
+                class="donate-btn w-full h-11 bg-bgGreen rounded-lg font-bold text-dark"
               >
                 Donate Now
               </button>
@@ -131,7 +156,7 @@
                 placeholder="Write Donation Amount"
               />
               <button
-                class="w-full h-11 bg-bgGreen rounded-lg font-bold text-dark"
+                class="donate-btn w-full h-11 bg-bgGreen rounded-lg font-bold text-dark"
               >
                 Donate Now
               </button>
@@ -169,7 +194,7 @@
                 placeholder="Write Donation Amount"
               />
               <button
-                class="w-full h-11 bg-bgGreen rounded-lg font-bold text-dark"
+                class="donate-btn w-full h-11 bg-bgGreen rounded-lg font-bold text-dark"
               >
                 Donate Now
               </button>
@@ -177,8 +202,9 @@
           </div>
         </div>
       </section>
-      <section class="lg:w-4/5 w-11/12 mx-auto">
-        <div class="text-dark p-5 border-2 rounded-xl mb-4">
+      <!-- history section -->
+      <section class="hidden history-section lg:w-4/5 w-11/12 mx-auto">
+        <!-- <div class="text-dark p-5 border-2 rounded-xl mb-4">
           <h1 class="flex items-center gap-2 mb-4 font-bold text-xl">
             <span>500 </span>
             <p>Taka is Donated for famine-2024 at Feni,Bangladesh</p>
@@ -189,22 +215,10 @@
               >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
             </span>
           </p>
-        </div>
-        <div class="text-dark p-5 border-2 rounded-xl">
-          <h1 class="flex items-center gap-2 mb-4 font-bold text-xl">
-            <span>500 </span>
-            <p>Taka is Donated for famine-2024 at Feni,Bangladesh</p>
-          </h1>
-          <p class="text-[16px] text-lightDark">
-            Date :
-            <span
-              >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
-            </span>
-          </p>
-        </div>
+        </div> -->
       </section>
     </main>
-    <footer class="w-full h-20 bg-bgNav"></footer>
+    <!-- <footer class="w-full h-20 bg-bgNav "></footer> -->
     <script src="./script.js"></script>
   </body>
 </html>
