@@ -57,6 +57,24 @@ export const nav = function (data) {
     `;
   }
 };
+export const historyAdd = function (amount, title) {
+  const date = new Date();
+  console.log(amount, title, date);
+  return `
+    <div class="text-dark p-5 border-2 rounded-xl mb-4">
+          <h1 class="flex items-center gap-2 mb-4 font-bold text-xl">
+            
+            <p> <span> ${amount} </span> Taka is <span> ${title}</span></p>
+          </h1>
+          <p class="text-[16px] text-lightDark px-5 py-2 rounded-md bg-[rgba(23,23,23,0.09)]">
+            Date :
+            <span
+              >${date.toString()}
+            </span>
+          </p>
+        </div>
+    `;
+};
 export const faqs = function (data) {
   return `
        <div class=" common-btn box border-2 p-4  mb-4 rounded-xl">
