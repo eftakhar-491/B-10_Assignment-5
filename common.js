@@ -5,7 +5,7 @@ export const nav = function (data) {
               class="sticky top-0 flex justify-between items-center bg-[#fff9ea72] h-20 lg:px-[10%] px-[2%] backdrop-blur-xl"
             >
               <button  class="menu w-24 h-11 bg-bgGreen rounded-lg font-bold text-dark">
-                Blog
+                
               </button>
               <div class="flex flex-col lg:flex-row items-center md:gap-4">
                 <img class="w-8" src="./assets/logo.png" alt="logo" />
