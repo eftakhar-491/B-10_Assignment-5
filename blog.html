@@ -3,9 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>B-10-Assignment-5</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: "#111111",
+              lightDark: "#111111B3",
+              bgGreen: "#B4F461",
+            },
+            fontFamily: {
+              lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    blog
+  <body class="max-w-[1440px] mx-auto font-lexend">
+    <header class="header2 mx-auto sticky top-0 backdrop-blur-3xl"></header>
+    <section
+      class="section w-11/12 lg:w-4/5 rounded-3xl py-8 px-7 bg-Whiteee absolute top-[160px] left-1/2 -translate-x-1/2"
+    ></section>
+    <script type="module" src="./blog.js"></script>
   </body>
 </html>

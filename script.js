@@ -1,12 +1,10 @@
-const navs = document.querySelector("header");
+import { nav, homeBlog, setMenuName } from "./common.js";
+const navs = document.querySelector(".header1");
 const donateBtn = document.querySelectorAll(".donate-btn");
-const accountBalance = document.getElementById("account-balance");
 const modal = document.querySelector(".modal");
 const historySection = document.querySelector(".history-section");
 const donateSection = document.querySelector(".donate-section");
-
-const donatePageBtn = document.querySelector(".donate-page-btn");
-const historyPageBtn = document.querySelector(".history-page-btn");
+navs.innerHTML = nav("home");
 function historyAdd(amount, title) {
   const date = new Date();
   console.log(amount, title, date);
@@ -25,42 +23,15 @@ function historyAdd(amount, title) {
         </div>
     `;
 }
-function nav() {
-  return `
-    <nav
-        class="sticky top-0 flex justify-between items-center bg-[#fff9ea72] h-20 lg:px-[10%] px-[2%] backdrop-blur-xl"
-      >
-        <button class="w-24 h-11 bg-bgGreen rounded-lg font-bold text-dark">
-          Blog
-        </button>
-        <div class="flex flex-col lg:flex-row items-center md:gap-4">
-          <img class="w-8" src="./assets/logo.png" alt="logo" />
-          <h2 class="text-sm md:text-lg font-bold text-dark">
-            Donate Bangladesh
-          </h2>
-        </div>
-        <div class="flex items-center gap-2">
-          <img src="./assets/coin.png" alt="coin-Img" />
-          <p class="text-lightDark">
-            <span id="account-balance">5500</span>BDT
-          </p>
-        </div>
-      </nav>
-      <section class="mt-5 flex justify-center gap-4 pb-4">
-        <button
-          class="donate-page-btn w-24 h-11 rounded-lg bg-bgGreen font-bold text-dark"
-        >
-          Donate
-        </button>
-        <button
-          class="history-page-btn w-24 h-11 rounded-lg text-lightDark border-2"
-        >
-          History
-        </button>
-      </section>
-    `;
-}
-navs.innerHTML += nav();
+const donatePageBtn = document.querySelector(".donate-page-btn");
+const historyPageBtn = document.querySelector(".history-page-btn");
+const accountBalance = document.getElementById("account-balance");
+const menu = document.querySelector(".menu");
+
+menu.addEventListener("click", function () {
+  homeBlog(menu);
+});
+setMenuName({ menu: menu, t: "Blog" });
 for (const btn of donateBtn) {
   btn.addEventListener("click", () => {
     const donateAmountUpdate =
@@ -80,12 +51,13 @@ for (const btn of donateBtn) {
     if (Number(accountBalance.innerText) < Number(donateAmount)) {
       return alert("your account have not sufficient balance");
     }
-    donateAmountUpdate.innerText = BigInt(
+    donateAmountUpdate.innerText = (
       Number(donateAmountUpdate.innerText) + Number(donateAmount)
-    );
-    accountBalance.innerText = BigInt(
+    ).toFixed(1);
+
+    accountBalance.innerText = (
       Number(accountBalance.innerText) - Number(donateAmount)
-    );
+    ).toFixed(1);
     modal.classList.toggle("hidden");
     modal.classList.toggle("flex");
 
