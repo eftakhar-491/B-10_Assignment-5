@@ -110,7 +110,7 @@ export const faqs = function (data) {
               />
             </svg></div>
           </div>
-           <p class=" dis text-sm pr-16 text-lightDark font-semibold">
+           <p class=" dis text-sm lg:pr-16 text-lightDark font-semibold">
           ${data.discription}</p>
         </div>
       `;
