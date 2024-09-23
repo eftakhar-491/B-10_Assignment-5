@@ -45,14 +45,12 @@ const FAQS = [
          `,
   },
 ];
-
 navs.innerHTML = nav();
 const menu = document.querySelector(".menu");
 setMenuName({ menu: menu, t: "Home" });
 for (const item of FAQS) {
   section.innerHTML += faqs(item);
 }
-
 const plus = document.querySelectorAll(".plus");
 const minas = document.querySelectorAll(".minas");
 const dis = document.querySelectorAll(".dis");
@@ -72,7 +70,6 @@ for (const plus1 of commonBtn) {
     if (
       !plus1.firstElementChild.lastElementChild.classList.contains("hidden")
     ) {
-      console.log(plus1);
       plus1.firstElementChild.lastElementChild.classList.toggle("hidden");
       plus1.firstElementChild.lastElementChild.previousElementSibling.classList.toggle(
         "hidden"
@@ -84,7 +81,6 @@ for (const plus1 of commonBtn) {
       if (
         !item.firstElementChild.lastElementChild.classList.contains("hidden")
       ) {
-        console.log(item.firstElementChild.lastElementChild);
         item.firstElementChild.lastElementChild.classList.toggle("hidden");
         item.firstElementChild.lastElementChild.previousElementSibling.classList.toggle(
           "hidden"
@@ -100,10 +96,6 @@ for (const plus1 of commonBtn) {
   });
 }
 
-console.log(menu);
 menu.addEventListener("click", function () {
   homeBlog(menu);
 });
-// document.body.onload = function () {
-//   menu.innerText = "hello";
-// };

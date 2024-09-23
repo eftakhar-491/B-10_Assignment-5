@@ -46,7 +46,6 @@ for (const btn of donateBtn) {
 
     historySection.innerHTML += historyAdd(Number(donateAmount), title);
     btn.previousElementSibling.value = "";
-    console.log(donateAmount, donateAmountUpdate, accountBalance);
   });
 }
 modal.addEventListener("click", () => {
