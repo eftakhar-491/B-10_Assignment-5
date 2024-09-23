@@ -103,9 +103,9 @@ export const homeBlog = function (data) {
     window.location.pathname === "/B-10_Assignment-5/index.html" ||
     window.location.pathname === "/B-10_Assignment-5/"
   ) {
-    window.location.href = "/blog.html";
-  } else if (window.location.pathname === "/blog.html") {
-    window.location.href = "/index.html";
+    window.location.href = "/B-10_Assignment-5/blog.html";
+  } else if (window.location.pathname === "/B-10_Assignment-5/blog.html") {
+    window.location.href = "/B-10_Assignment-5/index.html";
   }
 };
 export const setMenuName = function (data) {
