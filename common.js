@@ -100,8 +100,8 @@ export const faqs = function (data) {
 export const homeBlog = function (data) {
   console.log(data);
   if (
-    window.location.pathname === "/index.html" ||
-    window.location.pathname === "/"
+    window.location.pathname === "/B-10_Assignment-5/index.html" ||
+    window.location.pathname === "/B-10_Assignment-5/"
   ) {
     window.location.href = "/blog.html";
   } else if (window.location.pathname === "/blog.html") {
