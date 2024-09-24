@@ -17,7 +17,7 @@ const FAQS = [
     discription: ` you can use various methods based on the unique 
     identifier or characteristics of the element. Use the getElementById() or querySelector()
     method to select an element based on its unique ID attribute.
-    Use the getElementsByClassName(),getElementsByTagName(),querySelectorAll() method to select all elements with a specific class name.
+    Use the getElementsByClassName(), getElementsByTagName(), querySelectorAll() method to select all elements with a specific class name.
          `,
   },
   {
